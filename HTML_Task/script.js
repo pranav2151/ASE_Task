@@ -1,15 +1,14 @@
 let lightTheme = "styles/light.css";
 
 
-//adding event handler on the document to handle keyboard inputs
+
 document.addEventListener("keydown", keyboardInputHandler);
 
-//function to handle keyboard inputs
 function keyboardInputHandler(e) {
-  //grabbing the liveScreen
+  
   let res = document.getElementById("result");
 
-  //numbers
+  
  
   if (e.key === "0") {
     res.value += "0";
@@ -35,7 +34,7 @@ function keyboardInputHandler(e) {
     res.value += "9";
   }
 
-  //operators
+ 
   if (e.key === "+") {
     res.value += "+";
   } else if (e.key === "-") {
@@ -46,30 +45,29 @@ function keyboardInputHandler(e) {
     res.value += "/";
   }
 
-  //decimal key
+  
   if (e.key === ".") {
     res.value += ".";
   }
 
-  //press enter to see result
+  
   if (e.key === "Enter") {
     res.value = eval(result.value || null);
   }
 
-  //backspace for removing the last input
+  
   if (e.key === "Backspace") {
     let resultInput = res.value;
 
-    //remove the last element in the string
+    
     res.value = resultInput.substring(0, res.value.length - 1);
   }
 }
 
-// Clears the screen on click of AC button.
 function clearScreen() {
   document.getElementById("result").value = "";
 }
-// Displays entered value on screen.
+
 function liveScreen(value) {
   let res = document.getElementById("result");
   if (!res.value) {
