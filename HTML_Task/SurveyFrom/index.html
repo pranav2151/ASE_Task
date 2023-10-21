@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Survey Form</h1>
+      <form id="survey-form">
+        <label for="first-name" class="mandatory">First Name:</label>
+        <input type="text" id="first-name" class="input-field" required />
+
+        <label for="last-name" class="mandatory">Last Name:</label>
+        <input type="text" id="last-name" class="input-field" required />
+
+        <label for="dob" class="mandatory">Date of Birth:</label>
+        <input type="date" id="dob" class="input-field" required />
+
+        <label for="country" class="mandatory">Country:</label>
+        <select id="country" class="input-field" required>
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+          <option value="uk">UK</option>
+          <!-- Add more countries as needed -->
+        </select>
+
+        <div class="gender-container">
+          <label class="mandatory">Gender:</label>
+          <div class="gender-label">
+            <input
+              type="checkbox"
+              id="male"
+              name="gender"
+              class="input-field"
+              value="Male"
+              required />
+            <label for="male">Male</label>
+          </div>
+          <div class="gender-label">
+            <input
+              type="checkbox"
+              id="female"
+              name="gender"
+              class="input-field"
+              value="Female"
+              required />
+            <label for="female">Female</label>
+          </div>
+          <div class="gender-label">
+            <input
+              type="checkbox"
+              id="other"
+              name="gender"
+              class="input-field"
+              value="Other"
+              required />
+            <label for="other">Other</label>
+          </div>
+        </div>
+
+        <label for="profession" class="mandatory">Profession:</label>
+        <input type="text" id "profession" class="input-field" required />
+
+        <label for="email" class="mandatory">Email:</label>
+        <input type="email" id="email" class="input-field" required />
+
+        <label for="mobile" class="mandatory">Mobile Number:</label>
+        <input type="tel" id="mobile" class="input-field" required />
+
+        <div class="button-container">
+          <input
+            type="button"
+            class="submit-button"
+            value="Submit"
+            onclick="submitForm()" />
+          <input
+            type="button"
+            class="reset-button"
+            value="Reset"
+            onclick="resetForm()" />
+        </div>
+      </form>
+    </div>
+
+    <div class="popup" id="popup">
+      <h2>Survey Form Submission</h2>
+      <div id="popup-content"></div>
+      <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
