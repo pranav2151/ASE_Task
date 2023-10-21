@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class RomanToInteger {
     public static int romanToInteger(String s) {
         int result = 0;
@@ -40,8 +42,13 @@ public class RomanToInteger {
     }
 
     public static void main(String[] args) {
-        String roman = "IX";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a Roman numeral: ");
+        String roman = scanner.nextLine().toUpperCase(); 
         int integer = romanToInteger(roman);
         System.out.println("Integer value of " + roman + " is " + integer);
+
+        scanner.close();
     }
 }
